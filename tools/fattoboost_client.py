@@ -31,7 +31,7 @@ def fetch_fattoboost_month(token, start_date, end_date, property_url, property_p
     
     for attempt in range(3):
         try:
-            response = requests.post(url, json=payload, headers=headers, timeout=120)  # Long timeout for data processing
+            response = requests.post(url, json=payload, headers=headers, timeout=27100)  # Long timeout for data processing
             
             if response.status_code == 200:
                 data = response.json()
